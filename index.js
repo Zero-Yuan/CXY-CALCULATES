@@ -1,23 +1,23 @@
-//计算过程显示
+
 function get(num){
 	var shownums=document.getElementById("display");
     shownums.value+=num;
 }
 
-//清空
+
 var cc=document.getElementById("clear");
 function clear(){
 	document.getElementById("display").value="";
 }
 cc.addEventListener("click",clear,false);
-//回删
+
 var dd=document.getElementById("delete");
 function backspace(){
 	var shownums=document.getElementById("display");
     shownums.value=shownums.value.substring(0,shownums.value.length-1);
 }
 dd.addEventListener("click",backspace,false);
-//计算
+
 var re=document.getElementById("cal");
 function calculates(){
 	var result=0;
@@ -27,7 +27,6 @@ function calculates(){
 }
 re.addEventListener("click",calculates,false);
 
-//显示时间
 
 function showTime(){
 			var today=new Date();
@@ -44,7 +43,7 @@ function showTime(){
     document.getElementById("time").innerHTML=y+"年"+M+"月"+d+"日"+"</br>"+h+":"+m+":"+s+"  "+w[week];
     setTimeout("showTime()",1000);
 }
-//数字小于10时，前面加个0  比如说：12时18分8秒，显示为12:18:08
+
 function checkTime(i){
 	if(i<10){
     i="0"+i;
@@ -56,6 +55,9 @@ window.onload=function(){
 showTime();
 
 };
+
+
+
 
 
 
